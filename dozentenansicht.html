@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logged-in">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 29 29">
+                <path id="question_exchange_24dp_FILL0_wght400_GRAD0_opsz24"
+                    d="M54.5-891a14,14,0,0,1-6.789-1.681,14.687,14.687,0,0,1-5.075-4.482v3.526H40v-7.909h7.909v2.636H44.647a11.936,11.936,0,0,0,4.169,3.823,11.428,11.428,0,0,0,5.685,1.45,11.476,11.476,0,0,0,4.63-.939,12.055,12.055,0,0,0,3.757-2.537,12.061,12.061,0,0,0,2.538-3.757,11.478,11.478,0,0,0,.939-4.63H69a14.076,14.076,0,0,1-1.137,5.635,14.677,14.677,0,0,1-3.114,4.614,14.679,14.679,0,0,1-4.614,3.114A14.08,14.08,0,0,1,54.5-891ZM40-905.5a14.077,14.077,0,0,1,1.137-5.635,14.676,14.676,0,0,1,3.114-4.614,14.678,14.678,0,0,1,4.614-3.114A14.08,14.08,0,0,1,54.5-920a14,14,0,0,1,6.789,1.681,14.69,14.69,0,0,1,5.075,4.482v-3.526H69v7.909H61.091v-2.636h3.263a11.935,11.935,0,0,0-4.169-3.823,11.427,11.427,0,0,0-5.685-1.45,11.476,11.476,0,0,0-4.63.939,12.058,12.058,0,0,0-3.757,2.537,12.06,12.06,0,0,0-2.537,3.757,11.478,11.478,0,0,0-.939,4.63Z"
+                    transform="translate(-40 920)" fill="#393939" />
+            </svg>
+            <p>Admin</p>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo1.png" alt="Logo">
+            </div>
+            <h1>Dozentenansicht</h1>
+        </div>
+        <div class="semester-view">
+            <form action="#" method="get">
+                <button id="systemadministration">Systemadministration</button>
+            </form>
+            <form action="semesteransicht.html" method="get">
+                <button id="semester-view">Stundenplan ansehen</button>
+            </form>
+        </div>
+        <table class="dozentenansicht">
+            <thead>
+                <tr>
+                    <th>Dozenten</th>
+                    <th>E-Mail</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repeat this row for each lecturer -->
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="dozentenansicht-footer">
+            <p>4 von 37 haben abgegeben</p>
+            <button id="erinnerungsmail">Erinnerungsmail schicken</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
