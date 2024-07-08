@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="logged-in">
-            <p>Prof. Roderus</p>
+            <p>Admin</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                 <path id="logout_24dp_FILL0_wght400_GRAD0_opsz24"
                     d="M123.5-808.5a3.37,3.37,0,0,1-2.472-1.028A3.37,3.37,0,0,1,120-812v-24.5a3.37,3.37,0,0,1,1.028-2.472A3.37,3.37,0,0,1,123.5-840h12.25v3.5H123.5V-812h12.25v3.5Zm19.25-7-2.406-2.538,4.462-4.462H130.5V-826h14.306l-4.462-4.463L142.75-833l8.75,8.75Z"
@@ -22,7 +22,7 @@
             <div class="logo">
                 <img src="images/Logo1.png" alt="Logo">
             </div>
-            <h1>Semesteransicht</h1>
+            <h1>Stundenplan</h1>
         </div>
         <div class="top-buttons">
             <div class="display-options">
@@ -30,23 +30,18 @@
                 <button id="semester-dropdown">Semester 1</button>
             </div>
             <div class="semester-view">
-                <form action="index.html" method="get">
-                    <button id="semester-view">Wechseln zum Stundenplan</button>
+                <form action="systemadministration.html" method="get">
+                    <button id="systemadministration">Systemadministration</button>
+                </form>
+                <form action="dozentenansicht.html" method="get">
+                    <button id="semester-view">zur Dozentenansicht</button>
                 </form>
             </div>
         </div>
 
         <div class="content">
             <div class="sidebar" id="left">
-                <h2>Fächerwahl</h2>
-                <div class="subject" draggable="true" data-length="3">Web-Engineering<br>MUK Semester 6<br>Länge: 3 h
-                </div>
-                <div class="subject" draggable="true" data-length="1">Praxisprojekt<br>MUK Semester 6<br>Länge: 1 h
-                </div>
-                <div class="subject" draggable="true" data-length="2">Programmierung<br>MUK Semester 2<br>Länge: 2 h
-                </div>
-                <div class="subject" draggable="true" data-length="2">Wahlpflichtplatzhalter<br>MUK Semester
-                    3-6<br>Länge: 1,5 h</div>
+                <h2>Probleme</h2>
             </div>
             <div class="timetable" id="right">
                 <table>
@@ -165,7 +160,9 @@
                 </table>
             </div>
         </div>
-
+        <div class="speichern">
+            <button id="stundenplan-export">Stundenplan exportieren</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
