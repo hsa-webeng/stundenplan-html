@@ -1,0 +1,466 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+    flex: 1;
+}
+
+.logo img {
+    width: 6em;
+    margin-right: 3em;
+}
+
+.logged-in {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logged-in p {
+    margin-right: 1em;
+    font-size: 1.4em;
+}
+
+.semester-view {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#semester-view,
+#studiengang-dropdown,
+#semester-dropdown,
+#systemadministration,
+#erinnerungsmail,
+.btn,
+#dozentenansicht-btn,
+#stundenplan-export {
+    background-color: #8bc34a;
+    color: #000;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#studiengang-dropdown,
+#systemadministration,
+#dozentenansicht-btn {
+    margin-right: 1em;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    margin-right: 1em;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.faecherwahl {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.subject {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.timetable {
+    width: 75%;
+    /* padding: 20px; */
+    background-color: #fff;
+    /* border: 2px solid #000; */
+}
+
+.dozentenansicht {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    box-shadow: 0 3px 3px rgba(207, 23, 31, 0.5);
+}
+
+th,
+td {
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 40px;
+}
+
+tfoot {
+    background-color: #f9f9f9;
+    box-shadow: 0 -4px 3px -1px rgba(207, 23, 31, 0.5);
+}
+
+tfoot td {
+    text-align: left;
+}
+
+/* Remove the border between the columns in the footer */
+tfoot td:first-child {
+    border-right: none;
+}
+
+tfoot td:last-child {
+    border-left: none;
+    text-align: right;
+}
+
+/* Redips-spezifische Anpassungen */
+.redips-mark {
+    background-color: #f0f0f0;
+    /* Helle Hintergrundfarbe für Zielzellen */
+}
+
+.redips-drag-source {
+    opacity: 0.7;
+    /* Transparenz während des Ziehens */
+    border: 2px dashed #8bc34a;
+    /* Gestrichelter Rahmen während des Ziehens */
+}
+
+#redips-drag {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#redips-drag label {
+    margin-left: 5px;
+}
+
+.blocked {
+    background-color: #ddd;
+    pointer-events: none;
+    /* Verhindert das Droppen auf blockierte Zellen */
+}
+
+.redips-mark>div {
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    cursor: move;
+}
+
+.dragged {
+    background-color: #e7e7e7;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.speichern {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#speichern {
+    background-color: #8bc34a;
+    color: #000;
+    margin-right: 1em;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#abgeben {
+    background-color: #8bc34a;
+    color: #000;
+
+    font-size: 1.4em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hovered {
+    background-color: lightblue;
+}
+
+.dropped-subject {
+    
+    text-align: center;
+    padding: 6px; /* Mehr Padding für besseren Abstand */
+    font-size: 10px; /* Größere Schriftgröße */
+    line-height: 1.6; /* Höhere Zeilenhöhe für bessere Lesbarkeit */
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100px; /* Beispiel: Begrenzt die maximale Breite des grünen Feldes */
+    white-space: nowrap; /* Standard-Zeilenumbruch innerhalb der Zelle */
+    text-overflow: ellipsis; /* Fügt "..." am Ende des Textes hinzu, wenn er zu lang ist */
+    overflow: hidden; /* Versteckt den überlaufenden Text */
+}
+
+/* Systemadministrtion-CSS */
+.sysadmin-content {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.aktuelles-semester,
+.neues-semester {
+    width: 47%;
+    border: 2px solid #000;
+}
+
+.sysadmin-h2 {
+    padding-left: 1em;
+    border-bottom: 2px solid #000;
+    box-shadow: 0 3px 3px rgba(207, 23, 31, 0.5);
+}
+
+.sysadmin-btns {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#sysadmin-btns {
+    margin: 0.5em;
+    text-align: left;
+}
+
+
+/* Beispielfarben für Fächer in der Tabelle */
+.dropped-subject:nth-child(1) {
+    background-color: #8bc34a;
+}
+
+.dropped-subject:nth-child(2) {
+    background-color: #ff9800;
+}
+
+.dropped-subject:nth-child(3) {
+    background-color: #2196f3;
+}
+
+.dropped-subject:nth-child(4) {
+    background-color: #9c27b0;
+}
+
+.timetable td {
+    vertical-align: top;
+    position: relative;
+    /* Ermöglicht absolute Positionierung der Module */
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar,
+    .timetable {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    #semester-view,
+    #studiengang-dropdown,
+    #semester-dropdown,
+    #systemadministration,
+    #erinnerungsmail {
+        font-size: 1.2em;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        /* Abstand unten */
+    }
+
+    .header,
+    .semester-view,
+    .top-buttons,
+    .speichern {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 5em;
+        margin-right: 1em;
+    }
+
+    .sidebar,
+    .timetable {
+        padding: 10px;
+    }
+
+    #semester-view,
+    #studiengang-dropdown,
+    #semester-dropdown,
+    #systemadministration,
+    #erinnerungsmail {
+        font-size: 1em;
+        padding: 6px 12px;
+        margin-bottom: 10px;
+        /* Abstand unten */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 4em;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .sidebar,
+    .timetable {
+        padding: 5px;
+    }
+
+    #semester-view,
+    #studiengang-dropdown,
+    #semester-dropdown,
+    #systemadministration,
+    #erinnerungsmail {
+        font-size: 0.9em;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        /* Abstand unten */
+    }
+
+    .logged-in p {
+        font-size: 0.8em;
+    }
+
+    th,
+    td {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+/* Neue CSS-Regeln für die Tabellenzellen */
+.timetable table,
+.timetable th,
+.timetable td {
+    width: 100%;
+    table-layout: fixed;
+    /* Verhindert, dass Inhalte über die Zellen hinausragen */
+}
+
+.timetable th {
+    font-size: 0.9em;
+    /* Schriftgröße verkleinern */
+    white-space: nowrap;
+    /* Verhindert Zeilenumbrüche */
+}
+
+@media (max-width: 1024px) {
+
+    .timetable th,
+    .timetable td {
+        font-size: 0.8em;
+        padding: 5px;
+        /* Weniger Padding */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .timetable th,
+    .timetable td {
+        font-size: 0.7em;
+        padding: 4px;
+        /* Noch weniger Padding */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .timetable th,
+    .timetable td {
+        font-size: 0.6em;
+        padding: 3px;
+        /* Noch weniger Padding */
+    }
+}

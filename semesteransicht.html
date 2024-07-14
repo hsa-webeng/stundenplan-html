@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logged-in">
+            <p>Prof. Roderus</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+                <path id="logout_24dp_FILL0_wght400_GRAD0_opsz24"
+                    d="M123.5-808.5a3.37,3.37,0,0,1-2.472-1.028A3.37,3.37,0,0,1,120-812v-24.5a3.37,3.37,0,0,1,1.028-2.472A3.37,3.37,0,0,1,123.5-840h12.25v3.5H123.5V-812h12.25v3.5Zm19.25-7-2.406-2.538,4.462-4.462H130.5V-826h14.306l-4.462-4.463L142.75-833l8.75,8.75Z"
+                    transform="translate(-120 840)" fill="#393939" />
+            </svg>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo1.png" alt="Logo">
+            </div>
+            <h1>Semesteransicht</h1>
+        </div>
+        <div class="top-buttons">
+            <div class="display-options">
+                <button id="studiengang-dropdown">MuK</button>
+                <button id="semester-dropdown">Semester 1</button>
+            </div>
+            <div class="semester-view">
+                <form action="index.html" method="get">
+                    <button id="semester-view">Wechseln zum Stundenplan</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="sidebar" id="left">
+                <h2>Fächerwahl</h2>
+                <div class="subject" draggable="true" data-length="2">Web-Engineering<br>MUK Semester 6<br>Länge: 4 SWS
+                </div>
+                <div class="subject" draggable="true" data-length="1">Praxisprojekt<br>MUK Semester 6<br>Länge: 2 SWS
+                </div>
+                <div class="subject" draggable="true" data-length="2">Programmierung<br>MUK Semester 2<br>Länge: 4 SWS
+                </div>
+                <div class="subject" draggable="true" data-length="1">Wahlpflichtplatzhalter<br>MUK Semester 3-6<br>Länge: 2 SWS</div>
+            </div>
+            <div class="timetable" id="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Uhrzeit</th>
+                            <th>Montag</th>
+                            <th>Dienstag</th>
+                            <th>Mittwoch</th>
+                            <th>Donnerstag</th>
+                            <th>Freitag</th>
+                            <th>Samstag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:15 - 09:45</td>
+                            <td class="dropzone" data-time="0815" data-day="0"></td>
+                            <td class="dropzone" data-time="0815" data-day="1"></td>
+                            <td class="dropzone" data-time="0815" data-day="2"></td>
+                            <td class="dropzone" data-time="0815" data-day="3"></td>
+                            <td class="dropzone" data-time="0815" data-day="4"></td>
+                            <td class="dropzone" data-time="0815" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 11:30</td>
+                            <td class="dropzone" data-time="1000" data-day="0"></td>
+                            <td class="dropzone" data-time="1000" data-day="1"></td>
+                            <td class="dropzone" data-time="1000" data-day="2"></td>
+                            <td class="dropzone" data-time="1000" data-day="3"></td>
+                            <td class="dropzone" data-time="1000" data-day="4"></td>
+                            <td class="dropzone" data-time="1000" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 - 13:15</td>
+                            <td class="dropzone" data-time="1145" data-day="0"></td>
+                            <td class="dropzone" data-time="1145" data-day="1"></td>
+                            <td class="dropzone" data-time="1145" data-day="2"></td>
+                            <td class="dropzone" data-time="1145" data-day="3"></td>
+                            <td class="dropzone" data-time="1145" data-day="4"></td>
+                            <td class="dropzone" data-time="1145" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>14:15 - 15:45</td>
+                            <td class="dropzone" data-time="1415" data-day="0"></td>
+                            <td class="dropzone" data-time="1415" data-day="1"></td>
+                            <td class="dropzone" data-time="1415" data-day="2"></td>
+                            <td class="dropzone" data-time="1415" data-day="3"></td>
+                            <td class="dropzone" data-time="1415" data-day="4"></td>
+                            <td class="dropzone" data-time="1415" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>16:00 - 17:30</td>
+                            <td class="dropzone" data-time="1600" data-day="0"></td>
+                            <td class="dropzone" data-time="1600" data-day="1"></td>
+                            <td class="dropzone" data-time="1600" data-day="2"></td>
+                            <td class="dropzone" data-time="1600" data-day="3"></td>
+                            <td class="dropzone" data-time="1600" data-day="4"></td>
+                            <td class="dropzone" data-time="1600" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>17:45 - 19:15</td>
+                            <td class="dropzone" data-time="1745" data-day="0"></td>
+                            <td class="dropzone" data-time="1745" data-day="1"></td>
+                            <td class="dropzone" data-time="1745" data-day="2"></td>
+                            <td class="dropzone" data-time="1745" data-day="3"></td>
+                            <td class="dropzone" data-time="1745" data-day="4"></td>
+                            <td class="dropzone" data-time="1745" data-day="5"></td>
+                        </tr>
+                        <tr>
+                            <td>19:30 - 21:00</td>
+                            <td class="dropzone" data-time="1930" data-day="0"></td>
+                            <td class="dropzone" data-time="1930" data-day="1"></td>
+                            <td class="dropzone" data-time="1930" data-day="2"></td>
+                            <td class="dropzone" data-time="1930" data-day="3"></td>
+                            <td class="dropzone" data-time="1930" data-day="4"></td>
+                            <td class="dropzone" data-time="1930" data-day="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
