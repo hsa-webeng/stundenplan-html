@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logged-in">
+            <p>Admin</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+                <path id="logout_24dp_FILL0_wght400_GRAD0_opsz24"
+                    d="M123.5-808.5a3.37,3.37,0,0,1-2.472-1.028A3.37,3.37,0,0,1,120-812v-24.5a3.37,3.37,0,0,1,1.028-2.472A3.37,3.37,0,0,1,123.5-840h12.25v3.5H123.5V-812h12.25v3.5Zm19.25-7-2.406-2.538,4.462-4.462H130.5V-826h14.306l-4.462-4.463L142.75-833l8.75,8.75Z"
+                    transform="translate(-120 840)" fill="#393939" />
+            </svg>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo1.png" alt="Logo">
+            </div>
+            <h1>Dozentenansicht</h1>
+        </div>
+        <div class="semester-view">
+            <form action="systemadministration.html" method="get">
+                <button id="systemadministration">Systemadministration</button>
+            </form>
+            <form action="adminstundenplan.html" method="get">
+                <button id="semester-view">Stundenplan ansehen</button>
+            </form>
+        </div>
+        <table class="dozentenansicht">
+            <thead>
+                <tr>
+                    <th>Dozenten</th>
+                    <th>E-Mail</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Name, Vorname</td>
+                    <td>mail@example.de</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">4 von 37 haben abgegeben</td>
+                    <td>
+                        <button class="btn">Erinnerungsmail schicken</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

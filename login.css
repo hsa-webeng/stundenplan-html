@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background-image: url('images/Logo1.png'), url('images/Logo1.png'), url('images/Logo1.png'), url('images/Logo1.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 20em 8em, calc(100% - 23em) 10em, 23em calc(100% - 10em), calc(100% - 20em) calc(100% - 8em);
+    background-size: 20em 20em, 15em 15em, 15em 15em, 20em 20em; */
+}
+
+
+.login-container {
+    background-color: white;
+    padding: 3em 3em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid 2px #3b3b3b;
+    text-align: center;
+    width: 40%;
+}
+
+.logo img {
+    width: 100px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    flex: 1;
+}
+
+.h1-group{
+    display: flex;
+    margin-bottom: 1.4em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.forgot-password {
+    margin-right: 3em;
+}
+
+.forgot-password a {
+    color: #3b3b3b;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+button {
+    background-color: #8BC34A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0;
+}
+
+button:hover {
+    background-color: #7CB342;
+}
+/* Media Queries */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 2em 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .forgot-password {
+        margin: 1em 0;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-actions button {
+        margin-top: 1em;
+    }
+}
+

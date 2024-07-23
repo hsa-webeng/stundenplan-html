@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logged-in">
+            <p>Admin</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+                <path id="logout_24dp_FILL0_wght400_GRAD0_opsz24"
+                    d="M123.5-808.5a3.37,3.37,0,0,1-2.472-1.028A3.37,3.37,0,0,1,120-812v-24.5a3.37,3.37,0,0,1,1.028-2.472A3.37,3.37,0,0,1,123.5-840h12.25v3.5H123.5V-812h12.25v3.5Zm19.25-7-2.406-2.538,4.462-4.462H130.5V-826h14.306l-4.462-4.463L142.75-833l8.75,8.75Z"
+                    transform="translate(-120 840)" fill="#393939" />
+            </svg>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo1.png" alt="Logo">
+            </div>
+            <h1>Stundenplan</h1>
+        </div>
+        <div class="top-buttons">
+            <div class="display-options">
+                <button id="studiengang-dropdown">MuK</button>
+                <button id="semester-dropdown">Semester 1</button>
+            </div>
+            <div class="semester-view">
+                <form action="systemadministration.html" method="get">
+                    <button id="systemadministration">Systemadministration</button>
+                </form>
+                <form action="dozentenansicht.html" method="get">
+                    <button id="semester-view">zur Dozentenansicht</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="sidebar" id="left">
+                <h2>Probleme</h2>
+            </div>
+            <div class="timetable" id="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Uhrzeit</th>
+                            <th>Montag</th>
+                            <th>Dienstag</th>
+                            <th>Mittwoch</th>
+                            <th>Donnerstag</th>
+                            <th>Freitag</th>
+                            <th>Samstag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:15 - 09:45</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 11:30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 - 13:15</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:15 - 15:45</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16:00 - 17:30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17:45 - 19:15</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>19:30 - 21:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="speichern">
+            <button id="stundenplan-export">Stundenplan exportieren</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

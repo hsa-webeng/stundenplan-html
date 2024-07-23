@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logged-in">
+            <p>Admin</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+                <path id="logout_24dp_FILL0_wght400_GRAD0_opsz24"
+                    d="M123.5-808.5a3.37,3.37,0,0,1-2.472-1.028A3.37,3.37,0,0,1,120-812v-24.5a3.37,3.37,0,0,1,1.028-2.472A3.37,3.37,0,0,1,123.5-840h12.25v3.5H123.5V-812h12.25v3.5Zm19.25-7-2.406-2.538,4.462-4.462H130.5V-826h14.306l-4.462-4.463L142.75-833l8.75,8.75Z"
+                    transform="translate(-120 840)" fill="#393939" />
+            </svg>
+        </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo1.png" alt="Logo">
+            </div>
+            <h1>Systemadministration</h1>
+        </div>
+        <div class="semester-view">
+            <form action="dozentenansicht.html" method="get">
+                <button id="dozentenansicht-btn">Dozentenansicht</button>
+            </form>
+            <form action="adminstundenplan.html" method="get">
+                <button id="semester-view">Stundenplan ansehen</button>
+            </form>
+        </div>
+        <div class="sysadmin-content">
+            <div class="aktuelles-semester">
+                <div class="sysadmin-h2">
+                    <h2>Aktuelles Semester</h2>
+                </div>
+                <div class="sysadmin-btns">
+                    <button class="btn" id="sysadmin-btns">Daten updaten</button>
+                    <button class="btn" id="sysadmin-btns">Daten bearbeiten</button>
+                    <button class="btn" id="sysadmin-btns">Daten exportieren</button>
+                    <button class="btn" id="sysadmin-btns">Daten löschen</button>
+                </div>
+            </div>
+            <div class="neues-semester">
+                <div class="sysadmin-h2">
+                    <h2>Neues Semester einrichten</h2>
+                </div>
+                <div class="sysadmin-btns">
+                    <button class="btn" id="sysadmin-btns">Daten importieren</button>
+                    <button class="btn" id="sysadmin-btns">Daten importieren und alte Daten löschen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
